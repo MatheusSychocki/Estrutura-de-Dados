@@ -50,13 +50,11 @@ public class Arvore<T> {
 		}
 		NoArvore<T> retorno = null;
 		if (novo.getFilho() != null) {
-			retorno = novo.getFilho().verifica(novo);
+			retorno = novo.getFilho().verificaAltura(novo);
 			if (retorno != null) {
 				return novo.getAltura();
 			}
-		}
-		if (novo.getIrmao() != null) {
-			retorno = novo.getIrmao().verifica(novo);
+	
 		}
 		return novo.getAltura();
 	}

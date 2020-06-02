@@ -65,7 +65,7 @@ public class NoArvore<T> {
         return irmao;
     }
 
-    public NoArvore<T> verifica(T info) {
+    public NoArvore<T> verificaAltura(T info) {
         if (this.info.equals(info)) {
             return this;
         }
@@ -73,7 +73,7 @@ public class NoArvore<T> {
         NoArvore<T> retorno = null;
         if (this.filho != null) {
             altura++;
-            retorno = filho.verifica(info);
+            retorno = filho.verificaAltura(info);
 
             if (retorno != null) {
                 return retorno;
@@ -81,7 +81,7 @@ public class NoArvore<T> {
         }
         
         if (this.irmao != null) {
-            retorno = irmao.verifica(info);
+            retorno = irmao.verificaAltura(info);
         }
        
         return retorno;
